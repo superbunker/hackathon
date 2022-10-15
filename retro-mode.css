@@ -1,4 +1,7 @@
-
+:root {
+  --rndcolor1: rgb(184, 172, 172);
+  --rndcolor2: rgb(79, 69, 63);
+}
 
 body > .scaffold > :is(top-nav, navigation-rail, side-nav, footer),
 main > :not(:last-child),
@@ -12,10 +15,71 @@ main > :last-child {
   margin-bottom: min(10vmax, 10rem);
 }
 
+
 body {
-  background: #f00;
+  background: var(--rndcolor1)!important;
+  font-family: monospace !important;
+
 }
 
-h1,h2,h3,p {
+div {
+  background: var(--rndcolor1)!important;
+}
+
+div:nth-of-type(even) {
+  /* background: rgb(255, 65, 220)  !important; */
+  background: var(--rndcolor2)!important;
+}
+
+
+h1,h2,h3 {
   font-size: 50px !important;
+  font-family: fantasy !important;
+}
+
+p{
+  font-size: 24px !important;
+}
+
+/* hide iframe ads */
+iframe {
+  overflow: hidden !important;
+  pointer-events: none !important;
+  height: 0 !important;
+}
+
+ /* img{
+  content:url("https://web.archive.org/web/20090830115615/http://geocities.com/SouthBeach/Bluffs/8948/backgrounds/kittenhammock.gif") !important;
+} */
+
+img:hover {
+  width: 150%;
+  height: 150%;
+}
+
+
+img:nth-of-type(even) {
+  content:url("https://web.archive.org/web/20091026214037/http://www.geocities.com/HotSprings/6408/UNICORN.GIF") !important;
+}
+
+img:nth-of-type(odd) {
+  content:url("https://web.archive.org/web/20091027085628/http://www.geocities.com/purplepeach/unicornx3.gif") !important;
+}
+
+picture,
+span[role=img],
+image,
+#viewport{
+  content:url("https://web.archive.org/web/20090830062147/http://www.geocities.com/thedeeter/kittenpiano.gif") !important;
+  width: 100%;
+  height: 100%;
+}
+
+/* https://web.archive.org/web/20091027054927/http://geocities.com/speedykitten/speedyanim.gif */
+
+#ad_unit::before,
+#google_image_div::before,
+.GoogleCreativeContainerClass::before,
+.GoogleActiveViewElement::before {
+  content:url("https://web.archive.org/web/20090830062147/http://www.geocities.com/thedeeter/kittenpiano.gif") !important;
 }
